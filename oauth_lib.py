@@ -5,14 +5,13 @@ import config
 # Set your OAuth2 client ID and client secret
 client_id = config.CLIENT_ID
 client_secret = config.CLIENT_SECRET
-authorization_base_url = 'https://moonytunes.com/wp-json/oauth2/authorize'
+authorization_base_url = 'https://public-api.wordpress.com/oauth2/authorize'
 token_url = 'https://moonytunes.com/wp-json/oauth2/token'
 
 # Create OAuth2 session
 oauth = OAuth2Session(client_id, redirect_uri='https://your-redirect-uri.com')
 
 # Redirect user for authorization
-authorization_base_url = 'https://cos.html'
 authorization_url, state = oauth.authorization_url(authorization_base_url)
 
 # Get authorization response (assuming it's redirected to your redirect_uri)
